@@ -1,0 +1,229 @@
+sn2007ci at 21.4: No obvious feature found. This sn might be a little funny. Subluminous Ia?
+    https://iopscience.iop.org/article/10.1088/0004-637X/727/2/107
+
+Early time Ia-91T appear so featureless at very early times (~<-7)\
+
+sn1998es feels a little odd. Looks more like Ia-norm at early times.
+    I think I will need to read up on the differences between all of these clasifications. Probably each subtype will have a paragrah in my thesis.
+
+sn1999dq at -4.5 seems to be a small piece missing in the middle of the spectrum?
+
+It occurs to me we could have seen what lowering resolution does to SNR first before deciding to measure SNR for every single spectrum...
+
+sn2006oa has this big spike in the red. Exclude completely?
+
+Must tweak names, standardize snXXaa vs snXXXXaa. 
+
+Some spectrum im excluding bc they have missing sections, but some im skipping because i cant see any feature to measure. specifically with early time 91T so far.
+
+10as at -14.17, weird spike to the red of Halpha
+
+16gkg seems really fucking weird, im removing it. The redshift correction seems all over the place, i dont trust it at all
+
+Ic-norm, im not sure that im measuring NaI D at early times
+
+Skipped spectra that I want to revisit:
+x    sn1997br -9.6
+x    sn1997br -8.6
+x    sn1997br -8
+x    sn1997br -7.6
+    
+x    sn2003fa -7.6
+    
+x    sn2003bg -19.1
+    
+x    sn1998ab -7.8
+    
+-    sn1991T -12.8
+    
+x    sn1995bd -12
+x    sn1995bd -10.1
+x    sn1995bd -9.1
+    
+x    sn2007ci 21.4
+    
+-    sn91T -11.5
+x    sn91T -9.475
+    
+x    15dtg -16.25
+x    15dtg 6
+    
+-    12au 21.42
+-    12au 33.42
+    
+-    LSQ14efd -12.05
+
+
+
+Spectra that i didnt notice had flat bits:
+Ia-norm:
+    sn1992A 23.8
+    sn1995D 3.6
+    sn02er -5.4
+    sn1998V 30.8
+    sn1989B 2.6
+    sn1989B 4.6
+    sn1989B 6.6
+    sn1989B 8.6
+    sn1989B 10.6
+    sn1990N 1.6
+    sn2002er -6
+    sn1998eg 16.8
+    sn1998eg 18.8
+    sn2006al 2.5
+    sn2006al 3.4
+    sn2006al 4.3
+    sn2006al 5.4
+    sn2006al 6.3
+    sn2006al 9.1
+
+Ib-norm:
+    sn2005bf -1.9
+
+Ic-norm:
+    sn1983V -9
+
+IIP:
+    sn1999em 44.1
+
+
+Wrongfully removed spectra that had the same name, type and phase but didn't turn out to be actually duplicates of one another
+
+i sn_name sn_subtype sn_phase
+112 sn94D Ia-norm 15.2
+117 sn94D Ia-norm 15.2
+141 sn2001ep Ia-norm 2.8
+142 sn2001ep Ia-norm 2.8
+205 sn2001ay Ia-norm 3.3
+206 sn2001ay Ia-norm 3.3
+218 sn2001ay Ia-norm 31.4
+219 sn2001ay Ia-norm 31.4
+347 sn2004dt Ia-norm -6.5
+348 sn2004dt Ia-norm -6.5
+420 sn2002bo Ia-norm -1.5
+421 sn2002bo Ia-norm -1.5
+595 sn2003cg Ia-norm -2.1
+596 sn2003cg Ia-norm -2.1
+617 sn2003cg Ia-norm 22.9
+618 sn2003cg Ia-norm 22.9
+886 sn2002dj Ia-norm -11.4
+887 sn2002dj Ia-norm -11.4
+888 sn2002dj Ia-norm -10.4
+889 sn2002dj Ia-norm -10.4
+1048 sn1994D Ia-norm 49.5
+1049 sn1994D Ia-norm 49.5
+1152 sn1995al Ia-norm 16.4
+1153 sn1995al Ia-norm 16.4
+1249 sn2003ch Ia-norm 1.8
+1250 sn2003ch Ia-norm 1.8
+1268 sn2002kf Ia-norm 29.5
+1269 sn2002kf Ia-norm 29.5
+1346 sn94ae Ia-norm 3.3
+1347 sn94ae Ia-norm 3.3
+1498 sn2002ap Ic-broad 30.5
+1499 sn2002ap Ic-broad 30.5
+1505 sn2000fa Ia-norm -10.4
+1506 sn2000fa Ia-norm -10.4
+1626 sn1996X Ia-norm 7.1
+1627 sn1996X Ia-norm 7.1
+1751 sn2007qe Ia-norm 18.7
+1752 sn2007qe Ia-norm 18.7
+1757 sn2003du Ia-norm -11.1
+1758 sn2003du Ia-norm -11.1
+1792 sn2003du Ia-norm 32.9
+1793 sn2003du Ia-norm 32.9
+1983 sn2005cf Ia-norm -9.7
+1984 sn2005cf Ia-norm -9.7
+2011 sn2005cf Ia-norm 4.5
+2012 sn2005cf Ia-norm 4.5
+2029 sn2005cf Ia-norm 27.3
+2030 sn2005cf Ia-norm 27.3
+2137 sn2005cs IIP 0.8
+2138 sn2005cs IIP 0.8
+2318 sn2005hk Iax -8.3
+2319 sn2005hk Iax -8.3
+2320 sn2005hk Iax -7.3
+2321 sn2005hk Iax -7.3
+2322 sn2005hk Iax -6.3
+2323 sn2005hk Iax -6.3
+2324 sn2005hk Iax -6.3
+2328 sn2005hk Iax -4.2
+2329 sn2005hk Iax -4.2
+2378 sn1991bg Ia-91bg 2.1
+2379 sn1991bg Ia-91bg 2.1
+2575 sn91bg Ia-91bg 2.7
+2576 sn91bg Ia-91bg 2.7
+2889 sn1994T Ia-norm 0.8
+2890 sn1994T Ia-norm 0.8
+3004 sn2013df IIb -4.42
+3005 sn2013df IIb -4.42
+3011 11hs IIb -8.17
+3012 11hs IIb -8.17
+3015 11hs IIb -5.17
+3016 11hs IIb -5.17
+3017 11hs IIb -5.17
+3023 11hs IIb 27.83
+3024 11hs IIb 27.83
+3045 13ge Ic-norm 45.5
+3046 13ge Ic-norm 45.5
+3047 16gkg IIb -18.16
+3048 16gkg IIb -18.12
+3049 16gkg IIb -17.8
+3050 16gkg IIb -17.15
+3051 16gkg IIb -16.19
+3052 16gkg IIb -15.13
+3053 16gkg IIb -13.8
+3054 16gkg IIb -11.2
+3055 16gkg IIb -10.21
+3056 16gkg IIb -6.67
+3057 16gkg IIb -5.03
+3058 16gkg IIb -0.93
+3059 16gkg IIb -0.7
+3060 16gkg IIb -0.19
+3061 16gkg IIb 1.36
+3062 16gkg IIb 14.67
+3084 10as IIb -9.17
+3085 10as IIb -9.17
+3086 10as IIb -9.17
+3087 10as IIb -8.17
+3088 10as IIb -8.17
+3089 10as IIb -6.17
+3090 10as IIb -6.17
+3091 10as IIb -5.17
+3092 10as IIb -5.17
+3140 LSQ14efd Ic-norm 31.93
+3187 sn1994I Ic-norm -5.94
+3188 sn1994I Ic-norm -5.94
+3191 sn1994I Ic-norm -2.94
+3192 sn1994I Ic-norm -2.94
+3196 sn1994I Ic-norm 2.06
+3197 sn1994I Ic-norm 2.06
+3198 sn1994I Ic-norm 3.06
+3199 sn1994I Ic-norm 3.06
+3213 sn1994I Ic-norm 34.06
+3214 sn1994I Ic-norm 34.06
+3486 iPTF13bvn Ib-norm -5.8
+3487 iPTF13bvn Ib-norm -5.8
+3523 sn2004gq Ib-norm 20.8
+3524 sn2004gq Ib-norm 20.8
+3541 sn2009mg IIb 2.9
+3542 sn2009mg IIb 2.9
+3547 sn2009mg IIb 38.5
+3548 sn2009mg IIb 38.5
+3554 sn2004fe Ic-norm -6.78
+3583 sn2009jf Ib-norm -10.0
+3584 sn2009jf Ib-norm -10.0
+3593 sn2009jf Ib-norm 1.0
+3594 sn2009jf Ib-norm 1.0
+3595 sn2009jf Ib-norm 3.0
+3596 sn2009jf Ib-norm 3.0
+3631 sn2008ax IIb 9.0
+3632 sn2008ax IIb 9.0
+3690 sn2013dx Ic-broad -5.0
+3691 sn2013dx Ic-broad -5.0
+3695 sn2013dx Ic-broad 1.3
+3696 sn2013dx Ic-broad 1.3
+3698 sn2013dx Ic-broad 4.6
+3699 sn2013dx Ic-broad 4.6
+3762 sn2003jd Ic-broad 49.4
+3763 sn2003jd Ic-broad 49.4
