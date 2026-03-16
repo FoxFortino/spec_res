@@ -1,0 +1,1 @@
+alldata.parquet is the dataframe of preprocessed supernova spectra that I used to train the first iteration of ABC-SN. All of my analysis with measuring the SNR of the spectra started from this file.
