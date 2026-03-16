@@ -35,6 +35,32 @@ class SpectrumSNR():
         self.spec_min = np.min(spectrum)
         self.spec_max = np.max(spectrum)
 
+    def execute_algorithm(self, options):
+        assert options["Denoising Parameter"] != -999
+        assert not np.isnan(options["Denoising Parameter"])
+        
+        if np.isnan(options["minima_i"]):
+            options["minima_i"] = None
+
+        self.summarize()
+        self.minmax_normalize()
+        self.set_spectral_feature()
+        self.denoise_gaussian(options["Denoising Parameter"])
+        self.find_spectral_line(
+            feature_search_bounds=(options["searchBlu"], options["searchRed"]),
+            minima_i=options["minima_i"])
+        self.find_spectral_shoulders(
+            blu_shoulder_nudge=options["maxBlu"].astype(int),
+            red_shoulder_nudge=options["maxRed"].astype(int))
+        self.calc_pEW()
+        self.measure_feature_noise(
+            noise_window_blu=options["noiseWindowBlu"],
+            noise_window_red=options["noiseWindowRed"],
+            useBlu=options["useBlu"],
+            useRed=options["useRed"])
+        self.measure_SNR()
+        return
+    
     def summarize(self):
         summary = f"Supernova \"{self.name}\" ({self.subtype}) at phase {self.phase}"
         prnt(summary)
