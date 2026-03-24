@@ -1,0 +1,1 @@
+dataset_SNRinfo.parquet - Contains fluxes, metadata, and SNR calculation parameters for each spectrum.
