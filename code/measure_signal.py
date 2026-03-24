@@ -35,12 +35,14 @@ class SpectrumSNR():
         self.spec_min = np.min(spectrum)
         self.spec_max = np.max(spectrum)
 
-    def execute_algorithm(self, options):
+    def execute_algorithm(self, options, new_noise=None):
         assert options["Denoising Parameter"] != -999
         assert not np.isnan(options["Denoising Parameter"])
         
         if np.isnan(options["minima_i"]):
-            options["minima_i"] = None
+            minima_i = None
+        else:
+            minima_i = options["minima_i"]
 
         self.summarize()
         self.minmax_normalize()
@@ -48,11 +50,17 @@ class SpectrumSNR():
         self.denoise_gaussian(options["Denoising Parameter"])
         self.find_spectral_line(
             feature_search_bounds=(options["searchBlu"], options["searchRed"]),
-            minima_i=options["minima_i"])
+            minima_i=minima_i)
         self.find_spectral_shoulders(
             blu_shoulder_nudge=options["maxBlu"].astype(int),
             red_shoulder_nudge=options["maxRed"].astype(int))
         self.calc_pEW()
+        
+        if new_noise is not None:
+            assert isinstance(new_noise, np.ndarray)
+            assert np.all(new_noise.shape == self.noise.shape)
+            self.noise = new_noise
+            
         self.measure_feature_noise(
             noise_window_blu=options["noiseWindowBlu"],
             noise_window_red=options["noiseWindowRed"],
