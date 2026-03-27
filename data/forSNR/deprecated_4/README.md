@@ -1,0 +1,1 @@
+This data here is complete and clean, but we've decided to raise the noiseWindowBlu and noiseWindowRed by a factor of 2.5. This data has the original values for those parameters.
