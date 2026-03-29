@@ -13,8 +13,11 @@ sys.path.insert(0, "../code")
 import spectral_features as sf
 
 
-def prnt(msg):
-    # print(msg)
+def prnt(*msg):
+    # if len(msg) == 1:
+    #     print(msg[0])
+    # else:
+    #     print(*msg)
     return
 
 
@@ -246,10 +249,6 @@ class SpectrumSNR():
         self.pEW_integrand = 1 - (self.pseudo_cont / self.signal[self.interp_ind])
         self.pEW = np.trapz(np.abs(self.pEW_integrand), self.pc_wvl)
         # self.pEW = np.trapz(self.pEW_integrand, self.pc_wvl)
-        """
-        WWW Write down how we come to this pEA in excruciating detail.
-        IT WILL BE PAINFUL TO READ AND WRITE.
-        """
         
         # Calculate the depth of the spectral feature. To do this, we need the
         # flux of the pseudo-continuum at the location of the spectral feature,
@@ -279,8 +278,15 @@ class SpectrumSNR():
 
         # Calculate the standard deviation of the noise array on the red and
         # blue sides within these wavelength values.
-        self.blu_range = self.wvl_shoulder_blu - noise_window_blu, self.wvl_shoulder_blu
-        self.red_range = self.wvl_shoulder_red, self.wvl_shoulder_red + noise_window_red
+        self.blu_range = [self.wvl_shoulder_blu - noise_window_blu, self.wvl_shoulder_blu]
+        self.red_range = [self.wvl_shoulder_red, self.wvl_shoulder_red + noise_window_red]
+        
+        prnt(self.blu_range, self.red_range)
+        if self.blu_range[0] < 4500:
+            self.blu_range[0] = 4500
+        if self.red_range[1] > 7000:
+            self.red_range[1] = 7000
+        prnt(self.blu_range, self.red_range)
     
         # Indices for the wavelength array corresponding to the noise values
         # that we will take the standard deviation of for finding the noise on
