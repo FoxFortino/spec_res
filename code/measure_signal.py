@@ -6,9 +6,6 @@ from astropy import units as u
 from matplotlib import pyplot as plt
 from scipy.signal import argrelmin, argrelmax
 
-sys.path.insert(0, "/home/2649/repos/ABC-SN/code")
-import data_degrading as dg
-
 sys.path.insert(0, "../code")
 import spectral_features as sf
 
@@ -55,8 +52,8 @@ class SpectrumSNR():
             feature_search_bounds=(options["searchBlu"], options["searchRed"]),
             minima_i=minima_i)
         self.find_spectral_shoulders(
-            blu_shoulder_nudge=options["maxBlu"].astype(int),
-            red_shoulder_nudge=options["maxRed"].astype(int))
+            blu_shoulder_nudge=int(options["maxBlu"]),
+            red_shoulder_nudge=int(options["maxRed"]))
         self.calc_pEW()
         
         if new_noise is not None:
@@ -88,7 +85,7 @@ class SpectrumSNR():
 
     def denoise_gaussian(self, stddev):
         self.denoising_parameter = stddev
-        self.signal = dg.special_convolution(self.wvl, self.spectrum, self.wvl, stddev)
+        self.signal = special_convolution(self.wvl, self.spectrum, self.wvl, stddev)
         self.noise = self.spectrum - self.signal
         return
 
@@ -658,3 +655,46 @@ def wavelength_to_velocity(lambda_obs, lambda_em):
     """
     vel = c.c * ((lambda_obs / lambda_em) - 1)
     return vel.to(u.km / u.s).value
+
+
+def special_convolution(wvl0, flux0, mu, sigma):
+    """Copied directly from ABC-SN."""
+    weight = gaussian(wvl0, mu, sigma)
+
+    # Renormalize the PSF so that the total integral is 1. This is
+    # necessary to handle edge effects.
+    renorm = np.trapz(weight, x=wvl0)
+    weight /= renorm
+
+    # Perform one step of the integration of t
+    flux_conv = np.trapz(flux0 * weight, x=wvl0)
+
+    return flux_conv
+
+special_convolution = np.vectorize(special_convolution,
+                                   signature="(n),(n),(),()->()")
+
+
+def gaussian(x, mu, sigma):
+    """
+    Evaluates a Gaussian with mean mu and standard deviation sigma.
+
+    Copied directly from ABC-SN.
+    We use a gaussian to approximate the PSF of a general spectrograph.
+
+    Args:
+        x: array-like
+            The points to evaluate the Gaussian. For this work, these will be
+            wavelength values.
+        mu: float
+            The mean of the Gaussian.
+        sigma: float
+           The standard deviation of the Gaussian.
+
+    Returns:
+        gauss : array-like
+    """
+    normalization = 1 / (np.sqrt(2 * np.pi) * sigma)
+    gaussian = np.exp((-1/2) * ((x - mu) / sigma)**2)
+    gaussian *= normalization
+    return gaussian
