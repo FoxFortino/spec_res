@@ -1,4 +1,6 @@
 .DS_Store
+*.png
+*.zip
 
 # Do not track the model file as it is too big for GitHub
 ABCSN.keras
