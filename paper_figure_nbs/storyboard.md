@@ -19,5 +19,5 @@
 ![](./placeholder_heatmap_full.png)
 
 9. Heatmap specific
-10. ![](./placeholder_heatmap_specific.png)
+![](./placeholder_heatmap_specific.png)
 
