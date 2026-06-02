@@ -19,4 +19,5 @@
 ![](./placeholder_heatmap_full.png)
 
 9. Heatmap specific
-![](./placeholder_heatmap_specific.png)
+10. ![](./placeholder_heatmap_specific.png)
+
