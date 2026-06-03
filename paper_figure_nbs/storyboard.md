@@ -1,37 +1,23 @@
 1. OpenSNe Histogram plot
-
-2. 
 ![](SNe_over_time.jpg)
 
-3. Lowering resolution
-
-4. 
+2. Lowering resolution
 ![](sn1998dt_spectra.jpg)
 
-5. Example spectrum for each spectral feature
+3. Example spectrum for each spectral feature
 
-6. Histogram of SNR of dataset
+4. Histogram of SNR of dataset
+![](SNR_histogram.pdf)
 
-7. 
-![](SNR_histogram.png)
+5. 1 spectra per class at high and low SNR
+![](spectrum_per_class_SNR.pdf)
 
-8. 1 spectra per class at high and low SNR
+6. 1 spectra at 3 different R and 3 different SNR
+![](spectrum_SNR_R.pdf)
 
-9. 
-![](spectrum_per_class_SNR.png)
+7. Heatmap full
+![](heatmap_full.pdf)
 
-10. 1 spectra at 3 different R and 3 different SNR
-
-11. 
-![](spectrum_SNR_R.png)
-
-12. Heatmap full
-
-13. 
-![](heatmap_full.png)
-
-14. Heatmap specific
-
-15. 
-![](heatmap_specific.png)
+8. Heatmap specific
+![](heatmap_specific.pdf)
 
