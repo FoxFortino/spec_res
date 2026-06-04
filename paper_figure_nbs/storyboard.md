@@ -5,19 +5,20 @@
 ![](sn1998dt_spectra.jpg)
 
 3. Example spectrum for each spectral feature
+![](each_spectral_feature.png)
 
-4. Histogram of SNR of dataset
+5. Histogram of SNR of dataset
 ![](SNR_histogram.png)
 
-5. 1 spectra per class at high and low SNR
+6. 1 spectra per class at high and low SNR
 ![](spectrum_per_class_SNR.png)
 
-6. 1 spectra at 3 different R and 3 different SNR
+7. 1 spectra at 3 different R and 3 different SNR
 ![](spectrum_SNR_R.png)
 
-7. Heatmap full
+8. Heatmap full
 ![](heatmap_full.png)
 
-8. Heatmap specific
+9. Heatmap specific
 ![](heatmap_specific.png)
 
